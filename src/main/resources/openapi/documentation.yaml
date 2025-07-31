@@ -1,0 +1,35 @@
+openapi: "3.1.0"
+info:
+  title: "ktor_auto_reload_error_logging API"
+  description: "ktor_auto_reload_error_logging API"
+  version: "1.0.0"
+servers:
+  - url: "https://ktor_auto_reload_error_logging"
+paths:
+  /:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: "hello world!"
+  /files/respond_output_stream:
+    get:
+      description: ""
+  /files2/workaround_with_respond_bytes:
+    get:
+      description: "workaround"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/octet-stream:
+              schema:
+                type: "string"
+                format: "byte"
